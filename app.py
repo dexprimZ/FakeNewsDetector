@@ -46,7 +46,7 @@ model.fit(X_train,Y_train)
 
 # website
 st.title('Fake News Detector')
-input_text = st.text_input('Enter news Article')
+input_text = st.text_input('Enter News Article')
 
 def prediction(input_text):
     input_data = vector.transform([input_text])
@@ -56,6 +56,6 @@ def prediction(input_text):
 if input_text:
     pred = prediction(input_text)
     if pred == 1:
-        st.write('The News is Fake')
+        st.write('News is Fake')
     else:
-        st.write('The News Is Real')
+        st.write('News Is Real')
